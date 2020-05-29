@@ -1,0 +1,2309 @@
+{
+    "data": {
+        "config": {
+            "cch": {
+                "clock_date": true,
+                "clock_format": "24",
+                "hide_help": true,
+                "options": "clock",
+                "redirect": false,
+                "swipe_animate": "swipe"
+            },
+            "resources": [
+                {
+                    "type": "js",
+                    "url": "/local/card-tools.js"
+                },
+                {
+                    "type": "js",
+                    "url": "/local/browser-commander.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/local/custom-lovelace/compact-custom-header/compact-custom-header.js?v=0.0.1"
+                },
+                {
+                    "type": "module",
+                    "url": "/local/simple-thermostat.js?v=1"
+                }
+            ],
+            "title": "Home",
+            "views": [
+                {
+                    "badges": [
+                        "binary_sensor.switch_158d0000d84981",
+                        "person.isaac",
+                        "sensor.owm_condition",
+                        "sensor.illumination_04cf8ca136b7",
+                        "sensor.illumination_7811dcb8cbc6",
+                        "sun.sun",
+                        "binary_sensor.motion_sensor_158d0000e6253f",
+                        "binary_sensor.switch_158d000323d3ae",
+                        "binary_sensor.switch_158d0003269ea5"
+                    ],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.door_window_sensor_158d000343c81f"
+                                }
+                            ],
+                            "title": "Test",
+                            "type": "glance"
+                        }
+                    ],
+                    "icon": "mdi:view-dashboard",
+                    "id": "kiosk",
+                    "path": "default_view",
+                    "title": "Home"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "elements": [
+                                {
+                                    "entity": "switch.wall_switch_right_158d00024254f3",
+                                    "icon": "mdi:lightbulb",
+                                    "style": {
+                                        "--iron-icon-height": "60px",
+                                        "--iron-icon-width": "60px",
+                                        "left": "18%",
+                                        "top": "73%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "title": "Living Room Light",
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "switch.office_desk",
+                                    "image": "/local/Office_Desk.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "41.15%",
+                                        "top": "25.85%",
+                                        "width": "14.5%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.kitchen_light",
+                                    "image": "/local/Kitchen.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "36.45%",
+                                        "top": "78%",
+                                        "width": "22%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.entrance_light",
+                                    "image": "/local/Entrance.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "20.25%",
+                                        "top": "80.3%",
+                                        "width": "12%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.plug_158d0002832838",
+                                    "image": "/local/Lower_Bathroom_1.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "6.6%",
+                                        "top": "71.25%",
+                                        "width": "7.75%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.plug_158d0002832838",
+                                    "image": "/local/Lower_Bathroom_2.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "6.6%",
+                                        "top": "83.25%",
+                                        "width": "7.75%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.plug_158d0002832838",
+                                    "image": "/local/Lower_Bathroom_3.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "11.4%",
+                                        "top": "78.75%",
+                                        "width": "6.5%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "group.living_room_lights_left",
+                                    "image": "/local/Piano Room.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "14.75%",
+                                        "top": "52%",
+                                        "width": "24.77%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "group.living_room_lights_right",
+                                    "image": "/local/Living Room.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "14.3034%",
+                                        "top": "24.8%",
+                                        "width": "23.8%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.dining_room",
+                                    "image": "/local/Dining Room.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "34.7%",
+                                        "top": "54.15%",
+                                        "width": "19.5%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.stairs",
+                                    "image": "/local/Stairs.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "44.7%",
+                                        "top": "50.1%",
+                                        "width": "8.8%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.office_fan_switch",
+                                    "image": "/local/Office_Main_2.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "34.35%",
+                                        "top": "26.05%",
+                                        "width": "18.5%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "binary_sensor.office_ac_sensor",
+                                    "image": "/local/Air Conditioner/Air_Conditioner_On.png",
+                                    "state_image": {
+                                        "off": "/local/Air Conditioner/Air_Conditioner_Off.png",
+                                        "on": "/local/Air Conditioner/Air_Conditioner_On.png"
+                                    },
+                                    "style": {
+                                        "left": "35.8%",
+                                        "top": "25%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "script.4423863132162"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "binary_sensor.dining_room_ac_sensor",
+                                    "image": "/local/Air Conditioner/Air_Conditioner_On.png",
+                                    "state_image": {
+                                        "off": "/local/Air Conditioner/Air_Conditioner_Off.png",
+                                        "on": "/local/Air Conditioner/Air_Conditioner_On.png"
+                                    },
+                                    "style": {
+                                        "left": "37.4%",
+                                        "top": "54%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "script.5424464132962"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.office_desk",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "38.3%",
+                                        "top": "32%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "group.living_room_lights_right",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "15.1%",
+                                        "top": "27.3%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "group.living_room_lights_left",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "15.1%",
+                                        "top": "52%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.office_fan_switch",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "33.3%",
+                                        "top": "32%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.dining_room",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "32.4%",
+                                        "top": "54%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.kitchen_light",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "33.5%",
+                                        "top": "74.9%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.kitchen_fan",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Fan_Off.png",
+                                        "on": "/local/Fan_On.png"
+                                    },
+                                    "style": {
+                                        "left": "38.5%",
+                                        "top": "74.9%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.entrance_light",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "19.9%",
+                                        "top": "75.5%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.lower_bathroom_sink",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "11.9%",
+                                        "top": "77.3%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.lower_bathroom_toilet",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "6%",
+                                        "top": "72.6%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.lower_bathroom_closet",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "6%",
+                                        "top": "83.6%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.guest_bedroom_1",
+                                    "image": "/local/Second Floor Pieces/Guestroom 1.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "64.35%",
+                                        "top": "80.55%",
+                                        "width": "25%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.guest_bedroom_2",
+                                    "image": "/local/Second Floor Pieces/Guestroom 2.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "86.45%",
+                                        "top": "80.39%",
+                                        "width": "22.4%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.guest_bathroom_shower_light",
+                                    "image": "/local/Second Floor Pieces/Guest Bathroom P3.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "56.3%",
+                                        "top": "59.85%",
+                                        "width": "8.4%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.guest_bathroom_ceiling_light",
+                                    "image": "/local/Second Floor Pieces/Guest Bathroom P2.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "59%",
+                                        "top": "62.65%",
+                                        "width": "13.5%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.guest_bathroom_mirror_light",
+                                    "image": "/local/Second Floor Pieces/Guest Bathroom P1.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "68.3%",
+                                        "top": "64.2%",
+                                        "width": "11%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.master_bedroom_bathroom_light",
+                                    "image": "/local/Second Floor Pieces/Master Bedroom Bathroom.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "61.7%",
+                                        "top": "49%",
+                                        "width": "19.5%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.master_bedroom_main_light",
+                                    "image": "/local/Second Floor Pieces/Master Bedroom.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "64.5%",
+                                        "top": "26.05%",
+                                        "width": "24.55%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "binary_sensor.master_bedroom_ac_sensor",
+                                    "image": "/local/Air Conditioner/Air_Conditioner_On.png",
+                                    "state_image": {
+                                        "off": "/local/Air Conditioner/Air_Conditioner_Off.png",
+                                        "on": "/local/Air Conditioner/Air_Conditioner_On.png"
+                                    },
+                                    "style": {
+                                        "left": "65%",
+                                        "top": "27.4%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "script.5424862152962"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "image": "/local/no-state.png",
+                                    "style": {
+                                        "left": "60.4%",
+                                        "top": "79.5%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "script.5934464132962"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.isaac_room_main_light",
+                                    "image": "/local/Second Floor Pieces/Isaac Bedroom P2.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "86.3%",
+                                        "top": "25.6%",
+                                        "width": "21.6%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.isaac_room_night_light",
+                                    "image": "/local/Second Floor Pieces/Isaac Bedroom P1.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "90.95%",
+                                        "top": "18.6%",
+                                        "width": "12.38%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.stairs",
+                                    "image": "/local/Second Floor Pieces/Upstairs Stairs.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "94%",
+                                        "top": "56.7%",
+                                        "width": "6.95%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.upper_living_room",
+                                    "image": "/local/Second Floor Pieces/Upper Living Room.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "82%",
+                                        "top": "56.55%",
+                                        "width": "23.9%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.guest_bedroom_1",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "66.8%",
+                                        "top": "79.5%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.guest_bedroom_2",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "86%",
+                                        "top": "79.5%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.guest_bathroom_mirror_light",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "68%",
+                                        "top": "63%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.guest_bathroom_shower_light",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "56.5%",
+                                        "top": "60%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.guest_bathroom_ceiling_light",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "62.7%",
+                                        "top": "63%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.master_bedroom_bathroom_light",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "56.5%",
+                                        "top": "49.4%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.master_bedroom_bathroom_fan",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Fan_Off.png",
+                                        "on": "/local/Fan_On.png"
+                                    },
+                                    "style": {
+                                        "left": "62.5%",
+                                        "top": "49.4%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.master_bedroom_main_light",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "60%",
+                                        "top": "27.4%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.upper_living_room",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "79%",
+                                        "top": "57%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.upper_living_room",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "79%",
+                                        "top": "57%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.isaac_room_main_light",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "84%",
+                                        "top": "28%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.isaac_room_night_light",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "89.5%",
+                                        "top": "19%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.stairs",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "94%",
+                                        "top": "65%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.stairs",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "43.7%",
+                                        "top": "60.3%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "binary_sensor.isaac_room_ac_sensor",
+                                    "image": "/local/Air Conditioner/Air_Conditioner_On.png",
+                                    "state_image": {
+                                        "off": "/local/Air Conditioner/Air_Conditioner_Off.png",
+                                        "on": "/local/Air Conditioner/Air_Conditioner_On.png"
+                                    },
+                                    "style": {
+                                        "left": "89.5%",
+                                        "top": "28%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "script.5424862132962"
+                                    },
+                                    "type": "image"
+                                }
+                            ],
+                            "image": "/local/Background_IMG_2.png",
+                            "type": "picture-elements"
+                        }
+                    ],
+                    "icon": "mdi:floor-plan",
+                    "id": "kiosk",
+                    "panel": true,
+                    "title": "Floor Plan"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "elements": [
+                                {
+                                    "entity": "switch.green_house_circular_ceiling_light",
+                                    "image": "/local/Green House/1.png",
+                                    "state_filter": {
+                                        "off": "brightness(20%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "13.8%",
+                                        "top": "70.85%",
+                                        "width": "22.8%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.green_house_circular_ceiling_light",
+                                    "image": "/local/Green House/2.png",
+                                    "state_filter": {
+                                        "off": "brightness(20%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "32.0%",
+                                        "top": "70.85%",
+                                        "width": "15.75%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.office_desk",
+                                    "image": "/local/Green House/3.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "44.2%",
+                                        "top": "70.85%",
+                                        "width": "10.75%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.office_desk",
+                                    "image": "/local/Green House/4.png",
+                                    "state_filter": {
+                                        "off": "brightness(20%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "53.95%",
+                                        "top": "70.82%",
+                                        "width": "13.43%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.garden_top",
+                                    "image": "/local/Green House/6.png",
+                                    "state_filter": {
+                                        "off": "brightness(20%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "30.25%",
+                                        "top": "42.5%",
+                                        "width": "45.6%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "image": "/local/Ceiling Blinds/Ceiling Blinds 1.png",
+                                    "style": {
+                                        "left": "83%",
+                                        "top": "80.7%",
+                                        "width": "21.25%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "image": "/local/Ceiling Blinds/Ceiling Blinds 2.png",
+                                    "style": {
+                                        "left": "86.8%",
+                                        "top": "56.5%",
+                                        "width": "13.6%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "image": "/local/Ceiling Blinds/Ceiling Blinds 3.png",
+                                    "style": {
+                                        "left": "86.7%",
+                                        "top": "23.3%",
+                                        "width": "13.5%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "image": "/local/Ceiling Blinds/Ceiling Blinds 4.png",
+                                    "style": {
+                                        "left": "76.6%",
+                                        "top": "42.2%",
+                                        "width": "8%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.garden_bottom",
+                                    "image": "/local/Green House/5.png",
+                                    "state_filter": {
+                                        "off": "brightness(20%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "32.7%",
+                                        "top": "49.3%",
+                                        "width": "35.7%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.green_house_circular_ceiling_light",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "16.5%",
+                                        "top": "75%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.garden_top",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "26%",
+                                        "top": "47%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.garden_bottom",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "35%",
+                                        "top": "47%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "image": "/local/Curtain.png",
+                                    "style": {
+                                        "left": "16.5%",
+                                        "top": "61%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "script.2318649121162"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "image": "/local/Curtain.png",
+                                    "style": {
+                                        "left": "34.5%",
+                                        "top": "61%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "script.1363863135162"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "image": "/local/Curtain.png",
+                                    "style": {
+                                        "left": "50.5%",
+                                        "top": "61%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "script.2419549121162"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "hold_action": {
+                                        "action": "call-service",
+                                        "service": "script.1363894736319"
+                                    },
+                                    "image": "/local/Blinds/fan_light_bulb_icon.png",
+                                    "style": {
+                                        "left": "29.5%",
+                                        "top": "74%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "script.1263854736319"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "image": "/local/Blinds/fan_square.png",
+                                    "style": {
+                                        "left": "35.5%",
+                                        "top": "74%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "script.3419549121162"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "image": "/local/Blinds/Tilt.png",
+                                    "style": {
+                                        "left": "22%",
+                                        "top": "8.5%",
+                                        "width": "10%"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "image": "/local/Blinds/Tilt-Up.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "22%",
+                                        "top": "17.5%",
+                                        "width": "10%"
+                                    },
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "script.1564461614448"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "image": "/local/Blinds/Tilt-Down.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "22%",
+                                        "top": "28.8%",
+                                        "width": "10%"
+                                    },
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "script.1564491024448"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "image": "/local/Blinds/Full.png",
+                                    "style": {
+                                        "left": "32.6%",
+                                        "top": "8.5%",
+                                        "width": "10%"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "image": "/local/Blinds/Full-Up.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "32.6%",
+                                        "top": "17.5%",
+                                        "width": "10%"
+                                    },
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "script.1464651024448"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "image": "/local/Blinds/Full-Down.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "32.6%",
+                                        "top": "28.8%",
+                                        "width": "10%"
+                                    },
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "script.1564461024448"
+                                    },
+                                    "type": "image"
+                                }
+                            ],
+                            "image": "/local/Background_IMG_E5.png",
+                            "panel": false,
+                            "type": "picture-elements"
+                        }
+                    ],
+                    "icon": "mdi:home-modern",
+                    "panel": true,
+                    "title": "Solarium"
+                },
+                {
+                    "background": "radial-gradient(white, black)",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "aspect_ratio": "75%",
+                            "type": "iframe",
+                            "url": "https://embed.windy.com/embed2.html?lat=39.928&lon=116.388&zoom=11&level=surface&overlay=wind&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=39.842&detailLon=117.422&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1"
+                        }
+                    ],
+                    "icon": "mdi:weather-windy-variant",
+                    "id": "kiosk",
+                    "panel": true,
+                    "theme": "default",
+                    "title": "Home"
+                },
+                {
+                    "background": "center / cover no-repeat url(/local/Background_IMG_2.png) fixed",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "elements": [
+                                {
+                                    "entity": "camera.front_door",
+                                    "image": "/local/Camera Static Images/front_door_camera.jpg",
+                                    "style": {
+                                        "left": "50%",
+                                        "top": "50%",
+                                        "width": "150%"
+                                    },
+                                    "tap_action": {
+                                        "action": "more-info"
+                                    },
+                                    "type": "image"
+                                }
+                            ],
+                            "image": "/local/Background_IMG_2.png",
+                            "type": "picture-elements"
+                        },
+                        {
+                            "elements": [
+                                {
+                                    "entity": "camera.roof_1",
+                                    "image": "/local/Camera Static Images/roof_1_camera.jpg",
+                                    "style": {
+                                        "left": "50%",
+                                        "top": "50%",
+                                        "width": "150%"
+                                    },
+                                    "tap_action": {
+                                        "action": "more-info"
+                                    },
+                                    "type": "image"
+                                }
+                            ],
+                            "image": "/local/Background_IMG_2.png",
+                            "type": "picture-elements"
+                        },
+                        {
+                            "elements": [
+                                {
+                                    "entity": "switch.security_travel",
+                                    "image": "/local/background_security.png",
+                                    "state_image": {
+                                        "off": "/local/Background_IMG_2.png",
+                                        "on": "/local/background_security.png"
+                                    },
+                                    "style": {
+                                        "left": "50%",
+                                        "top": "50%",
+                                        "width": "100%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.security_travel",
+                                    "image": "/local/world_on.png",
+                                    "state_image": {
+                                        "off": "/local/world_off.png",
+                                        "on": "/local/world_on.png"
+                                    },
+                                    "style": {
+                                        "left": "50%",
+                                        "top": "56%",
+                                        "width": "40%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.security_travel",
+                                    "image": "/local/travel_mode_off.png",
+                                    "state_image": {
+                                        "off": "/local/travel_mode_off.png",
+                                        "on": "/local/travel_mode_on.png"
+                                    },
+                                    "style": {
+                                        "left": "50%",
+                                        "top": "13%",
+                                        "width": "30%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                }
+                            ],
+                            "image": "/local/Background_IMG_2.png",
+                            "type": "picture-elements"
+                        },
+                        {
+                            "elements": [
+                                {
+                                    "entity": "camera.car_park",
+                                    "image": "/local/Camera Static Images/car_park_camera.jpg",
+                                    "style": {
+                                        "left": "50%",
+                                        "top": "50%",
+                                        "width": "150%"
+                                    },
+                                    "tap_action": {
+                                        "action": "more-info"
+                                    },
+                                    "type": "image"
+                                }
+                            ],
+                            "image": "/local/Background_IMG_2.png",
+                            "type": "picture-elements"
+                        },
+                        {
+                            "elements": [
+                                {
+                                    "entity": "camera.roof_2",
+                                    "image": "/local/Camera Static Images/roof_2_camera.jpg",
+                                    "style": {
+                                        "left": "50%",
+                                        "top": "50%",
+                                        "width": "150%"
+                                    },
+                                    "tap_action": {
+                                        "action": "more-info"
+                                    },
+                                    "type": "image"
+                                }
+                            ],
+                            "image": "/local/Background_IMG_2.png",
+                            "type": "picture-elements"
+                        },
+                        {
+                            "elements": [
+                                {
+                                    "entity": "camera.corner",
+                                    "image": "/local/Camera Static Images/corner_camera.jpg",
+                                    "style": {
+                                        "left": "50%",
+                                        "top": "50%",
+                                        "width": "150%"
+                                    },
+                                    "tap_action": {
+                                        "action": "more-info"
+                                    },
+                                    "type": "image"
+                                }
+                            ],
+                            "image": "/local/Background_IMG_2.png",
+                            "type": "picture-elements"
+                        }
+                    ],
+                    "icon": "mdi:cctv",
+                    "id": "kiosk",
+                    "title": "Cameras"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "elements": [
+                                {
+                                    "entity": "switch.office",
+                                    "image": "/local/Air Conditioner UI/small.png",
+                                    "style": {
+                                        "left": "73.9%",
+                                        "top": "27.5%",
+                                        "width": "48.5%"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.office",
+                                    "image": "/local/Air Conditioner UI/small.png",
+                                    "style": {
+                                        "left": "73.9%",
+                                        "top": "72.7%",
+                                        "width": "48.5%"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.office",
+                                    "image": "/local/Air Conditioner UI/small.png",
+                                    "style": {
+                                        "left": "26.8%",
+                                        "top": "72.7%",
+                                        "width": "48.5%"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.office",
+                                    "image": "/local/Air Conditioner UI/small.png",
+                                    "style": {
+                                        "left": "26.8%",
+                                        "top": "27.5%",
+                                        "width": "48.5%"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.office_desk",
+                                    "image": "/local/Air Conditioner UI/down_arrow.png",
+                                    "style": {
+                                        "left": "74.1%",
+                                        "top": "72.7%",
+                                        "width": "21%"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.office_desk",
+                                    "image": "/local/Air Conditioner UI/up_arrow.png",
+                                    "style": {
+                                        "left": "74.1%",
+                                        "top": "26.%",
+                                        "width": "22%"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.office_desk",
+                                    "image": "/local/Blinds/Tilt-Up.png",
+                                    "style": {
+                                        "left": "26.8%",
+                                        "top": "26.%",
+                                        "width": "32%"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.office_desk",
+                                    "image": "/local/Blinds/Tilt-Down.png",
+                                    "style": {
+                                        "left": "26.8%",
+                                        "top": "72.7%",
+                                        "width": "32%"
+                                    },
+                                    "type": "image"
+                                }
+                            ],
+                            "image": "/local/Background_IMG_E5.png",
+                            "type": "picture-elements"
+                        },
+                        {
+                            "elements": [
+                                {
+                                    "entity": "switch.wall_switch_right_158d00024254f3",
+                                    "icon": "mdi:lightbulb",
+                                    "style": {
+                                        "--iron-icon-height": "60px",
+                                        "--iron-icon-width": "60px",
+                                        "left": "18%",
+                                        "top": "73%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "title": "Living Room Light",
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "switch.office_desk",
+                                    "image": "/local/Office_Desk.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "41.15%",
+                                        "top": "25.85%",
+                                        "width": "14.5%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.kitchen_light",
+                                    "image": "/local/Kitchen.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "36.45%",
+                                        "top": "78%",
+                                        "width": "22%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.entrance_light",
+                                    "image": "/local/Entrance.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "20.25%",
+                                        "top": "80.3%",
+                                        "width": "12%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.plug_158d0002832838",
+                                    "image": "/local/Bathroom.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "8.7%",
+                                        "top": "77.71%",
+                                        "width": "12%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.plug_158d0002832838",
+                                    "image": "/local/Piano Room.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "14.75%",
+                                        "top": "52%",
+                                        "width": "24.77%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.plug_158d0002832838",
+                                    "image": "/local/Living Room.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "14.3034%",
+                                        "top": "24.8%",
+                                        "width": "23.8%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.dining_room",
+                                    "image": "/local/Dining Room.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "34.7%",
+                                        "top": "54.15%",
+                                        "width": "19.5%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.plug_158d0002832838",
+                                    "image": "/local/Stairs.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "44.7%",
+                                        "top": "50.1%",
+                                        "width": "8.8%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.office_fan_switch",
+                                    "image": "/local/Office_Main_2.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "34.35%",
+                                        "top": "26.05%",
+                                        "width": "18.5%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.office_desk",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "35.3%",
+                                        "top": "30%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.office_fan_switch",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "40.3%",
+                                        "top": "30%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.dining_room",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "35%",
+                                        "top": "55.8%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.kitchen_light",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "35.5%",
+                                        "top": "76.5%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.kitchen_fan",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Fan_Off.png",
+                                        "on": "/local/Fan_On.png"
+                                    },
+                                    "style": {
+                                        "left": "40.5%",
+                                        "top": "76.5%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.entrance_light",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "20.9%",
+                                        "top": "76.5%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.guest_bedroom_1",
+                                    "image": "/local/Second Floor Pieces/Guestroom 1.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "64.35%",
+                                        "top": "80.55%",
+                                        "width": "25%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.guest_bedroom_2",
+                                    "image": "/local/Second Floor Pieces/Guestroom 2.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "86.45%",
+                                        "top": "80.39%",
+                                        "width": "22.4%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.guest_bathroom_shower_light",
+                                    "image": "/local/Second Floor Pieces/Guest Bathroom P3.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "56.3%",
+                                        "top": "59.85%",
+                                        "width": "8.4%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.guest_bathroom_ceiling_light",
+                                    "image": "/local/Second Floor Pieces/Guest Bathroom P2.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "59%",
+                                        "top": "62.65%",
+                                        "width": "13.5%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.guest_bathroom_mirror_light",
+                                    "image": "/local/Second Floor Pieces/Guest Bathroom P1.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "68.3%",
+                                        "top": "64.2%",
+                                        "width": "11%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.master_bedroom_bathroom_light",
+                                    "image": "/local/Second Floor Pieces/Master Bedroom Bathroom.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "61.7%",
+                                        "top": "49%",
+                                        "width": "19.5%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.master_bedroom_main_light",
+                                    "image": "/local/Second Floor Pieces/Master Bedroom.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "64.5%",
+                                        "top": "26.05%",
+                                        "width": "24.55%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.isaac_room_main_light",
+                                    "image": "/local/Second Floor Pieces/Isaac Bedroom P2.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "86.3%",
+                                        "top": "25.6%",
+                                        "width": "21.6%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.isaac_room_night_light",
+                                    "image": "/local/Second Floor Pieces/Isaac Bedroom P1.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "90.95%",
+                                        "top": "18.6%",
+                                        "width": "12.38%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.stairs",
+                                    "image": "/local/Second Floor Pieces/Upstairs Stairs.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "94%",
+                                        "top": "56.7%",
+                                        "width": "6.95%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.upper_living_room",
+                                    "image": "/local/Second Floor Pieces/Upper Living Room.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "82%",
+                                        "top": "56.55%",
+                                        "width": "23.9%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.guest_bedroom_1",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "64%",
+                                        "top": "79.5%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.guest_bedroom_2",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "86%",
+                                        "top": "79.5%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.guest_bathroom_mirror_light",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "68%",
+                                        "top": "63%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.guest_bathroom_shower_light",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "56.5%",
+                                        "top": "60%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.guest_bathroom_ceiling_light",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "62.7%",
+                                        "top": "63%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.master_bedroom_bathroom_light",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "56.5%",
+                                        "top": "49.4%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.master_bedroom_bathroom_fan",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Fan_Off.png",
+                                        "on": "/local/Fan_On.png"
+                                    },
+                                    "style": {
+                                        "left": "62.5%",
+                                        "top": "49.4%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.master_bedroom_main_light",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "65%",
+                                        "top": "27.4%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.upper_living_room",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "79%",
+                                        "top": "57%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.upper_living_room",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "79%",
+                                        "top": "57%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.isaac_room_main_light",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "81.3%",
+                                        "top": "28%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.isaac_room_night_light",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "89.5%",
+                                        "top": "19%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.stairs",
+                                    "image": "/local/Light_Off.png",
+                                    "state_image": {
+                                        "off": "/local/Light_Off.png",
+                                        "on": "/local/Light_On.png"
+                                    },
+                                    "style": {
+                                        "left": "94%",
+                                        "top": "65%",
+                                        "width": "5.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                }
+                            ],
+                            "id": "kiosk",
+                            "image": "/local/Background_IMG_E5.png",
+                            "type": "picture-elements"
+                        },
+                        {
+                            "entity": "climate.office_ac",
+                            "name": "Office AC",
+                            "theme": "Smart - Light",
+                            "type": "thermostat"
+                        },
+                        {
+                            "entity": "climate.master_bedroom_ac",
+                            "name": "Master",
+                            "theme": "Smart - Light",
+                            "type": "thermostat"
+                        },
+                        {
+                            "entity": "climate.living_room_ac",
+                            "name": "Living Room",
+                            "theme": "Google - Dark",
+                            "type": "thermostat"
+                        },
+                        {
+                            "elements": [
+                                {
+                                    "entity": "switch.office_desk",
+                                    "image": "/local/Fan Controller/Low.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "50%",
+                                        "top": "15%",
+                                        "width": "93%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.office_desk",
+                                    "image": "/local/Fan Controller/Medium.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "50%",
+                                        "top": "38%",
+                                        "width": "92.3%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.office_desk",
+                                    "image": "/local/Fan Controller/High.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "50%",
+                                        "top": "61%",
+                                        "width": "93%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.office_desk",
+                                    "image": "/local/Fan Controller/Off.png",
+                                    "state_filter": {
+                                        "off": "brightness(25%)",
+                                        "on": "brightness(100%)"
+                                    },
+                                    "style": {
+                                        "left": "49.7%",
+                                        "top": "84%",
+                                        "width": "93%"
+                                    },
+                                    "tap_action": "none",
+                                    "type": "image"
+                                }
+                            ],
+                            "image": "/local/Background_IMG_E5.png",
+                            "type": "picture-elements"
+                        },
+                        {
+                            "entity": "climate.office_ac",
+                            "hold_action": {
+                                "action": "more-info"
+                            },
+                            "show_icon": true,
+                            "show_name": true,
+                            "tap_action": {
+                                "action": "toggle"
+                            },
+                            "type": "entity-button"
+                        }
+                    ],
+                    "panel": false,
+                    "title": "Test"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entity": "climate.office_ac",
+                            "step_size": 1,
+                            "type": "custom:simple-thermostat"
+                        }
+                    ],
+                    "panel": false,
+                    "title": "asd"
+                }
+            ]
+        }
+    },
+    "key": "lovelace",
+    "version": 1
+}

@@ -1,0 +1,8 @@
+2019-08-01 13:01:00 ERROR (SyncWorker_0) [homeassistant.util.yaml.loader] while parsing a block mapping
+  in "/config/scripts.yaml", line 723, column 3
+expected <block end>, but found '<block mapping start>'
+  in "/config/scripts.yaml", line 729, column 4
+2019-08-01 13:01:00 ERROR (MainThread) [homeassistant.bootstrap] Error loading /config/configuration.yaml: while parsing a block mapping
+  in "/config/scripts.yaml", line 723, column 3
+expected <block end>, but found '<block mapping start>'
+  in "/config/scripts.yaml", line 729, column 4

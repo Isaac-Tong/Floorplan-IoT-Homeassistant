@@ -1,0 +1,858 @@
+'1563699738569':
+  alias: Test2
+  sequence:
+    - event: browser_command
+      event_data:
+        command: more-info
+        entity_id: camera.front_door
+        large: true
+'1563862946252':
+  alias: Second Floor Lights On
+  sequence:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.upper_living_room
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_on
+      data:
+        entity_id: switch.guest_bedroom_2
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_on
+      data:
+        entity_id: switch.guest_bedroom_1
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_on
+      data:
+        entity_id: switch.isaac_room_main_light
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_on
+      data:
+        entity_id: switch.isaac_room_night_light
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_on
+      data:
+        entity_id: switch.guest_bathroom_ceiling_light
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_on
+      data:
+        entity_id: switch.guest_bathroom_shower_light
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_on
+      data:
+        entity_id: switch.guest_bathroom_mirror_light
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_on
+      data:
+        entity_id: switch.master_bedroom_main_light
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_on
+      data:
+        entity_id: switch.master_bedroom_bathroom_light
+'1563863035962':
+  alias: Air Conditioner_2
+  sequence:
+    - event: browser_command
+      event_data:
+        command: popup
+        title: Air Conditioner Control
+        card:
+          type: entities
+          entities:
+            - light.gateway_light_04cf8ca136b7
+            - light.gateway_light_7811dcb8cbc6
+'1363863135162':
+  alias: Middle_Shades_Control_Pop_Up
+  sequence:
+    - event: browser_command
+      event_data:
+        command: popup
+        title: Middle Shades Control
+        card:
+          type: picture-elements
+          image: /local/Background_IMG_E5.png
+          elements:
+       
+           -  image: /local/Air Conditioner UI/small.png
+              style:
+                  left: 73.9%
+                  top: 27.5%
+                  width: 48.5%
+              type: image
+            
+           -  image: /local/Air Conditioner UI/small.png
+              style:
+                  left: 73.9%
+                  top: 72.7%
+                  width: 48.5%
+              type: image
+            
+           -  image: /local/Air Conditioner UI/small.png
+              style:
+                  left: 26.8%
+                  top: 72.7%
+                  width: 48.5%
+              type: image
+           
+           -  image: /local/Air Conditioner UI/small.png
+              style:
+                  left: 26.8%
+                  top: 27.5%
+                  width: 48.5%
+              type: image
+            
+           -  image: /local/Air Conditioner UI/down_arrow.png
+              style:
+                  left: 74.1%
+                  top: 72.7%
+                  width: 21%
+              tap_action:
+                  action: call-service
+                  service: script.1563894723610
+              type: image
+            
+           -  image: /local/Air Conditioner UI/up_arrow.png
+              style:
+                  left: 74.1%
+                  top: 26.%
+                  width: 22%
+              tap_action:
+                  action: call-service
+                  service: script.1563894736229          
+              type: image
+            
+           -  image: /local/Blinds/Tilt-Up.png
+              style:
+                  left: 26.8%
+                  top: 26.%
+                  width: 32%
+              tap_action:
+                  action: call-service
+                  service: script.1563894736318
+              type: image
+            
+           -  image: /local/Blinds/Tilt-Down.png
+              style:
+                  left: 26.8%
+                  top: 72.7%
+                  width: 32%
+              tap_action:
+                  action: call-service
+                  service: script.1563894736319
+              type: image
+'1563880218224':
+  alias: Second Floor Lights Off
+  sequence:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.upper_living_room
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_off
+      data:
+        entity_id: switch.guest_bedroom_2
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_off
+      data:
+        entity_id: switch.guest_bedroom_1
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_off
+      data:
+        entity_id: switch.isaac_room_main_light
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_off
+      data:
+        entity_id: switch.isaac_room_night_light
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_off
+      data:
+        entity_id: switch.guest_bathroom_ceiling_light
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_off
+      data:
+        entity_id: switch.guest_bathroom_shower_light
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_off
+      data:
+        entity_id: switch.guest_bathroom_mirror_light
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_off
+      data:
+        entity_id: switch.master_bedroom_main_light
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_off
+      data:
+        entity_id: switch.master_bedroom_bathroom_light
+'1563880319746':
+  alias: Second Floor Regular Off
+  sequence:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.master_bedroom_main_light
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_off
+      data:
+        entity_id: switch.master_bedroom_bathroom_light
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_off
+      data:
+        entity_id: switch.upper_living_room
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_off
+      data:
+        entity_id: switch.isaac_room_main_light
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_off
+      data:
+        entity_id: switch.isaac_room_night_light
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_off
+      data:
+        entity_id: switch.guest_bathroom_ceiling_light
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_off
+      data:
+        entity_id: switch.guest_bathroom_shower_light
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_off
+      data:
+        entity_id: switch.guest_bathroom_mirror_light
+'1563880517320':
+  alias: asds2
+  sequence:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.master_bedroom_main_light
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_on
+      data:
+        entity_id: switch.master_bedroom_bathroom_light
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_on
+      data:
+        entity_id: switch.upper_living_room
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_on
+      data:
+        entity_id: switch.isaac_room_main_light
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_on
+      data:
+        entity_id: switch.isaac_room_night_light
+    - delay:
+        milliseconds: 200 
+    - service: switch.turn_on
+      data:
+        entity_id: switch.guest_bathroom_ceiling_light
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_oon
+      data:
+        entity_id: switch.guest_bathroom_shower_light
+    - delay:
+        milliseconds: 200
+    - service: switch.turn_on
+      data:
+        entity_id: switch.guest_bathroom_mirror_light
+'1563888227278':
+  alias: Turn Air Conditioner ON
+  sequence:
+    - service: broadlink.send
+      data:
+        host: 
+        packet:
+          - JgAkAQABJZQVOBMTFRMUNxQUFBMVExQUFBMVExM4FBQUExYSFRIVExQTFhIVEhQVFBMTOBQUFBMVExMUFRMTFBU3FRIVNxUUEhQVNxUSFQACkBQTFRMUExUTFBMUFBUSFRMVEhYSFBMVExQTFRMVExQTFBQUExUTFBMVExQTFRMVEhUTFRIVExUSFTcVNxM4FRMUAAUgAAEmlBQ3FRMVEhU3FRIVExUTExQVEhQUFTcTFBUTFBMVExQTFhIVEhQUFRIVExU3FBMVExQTFRMUExQUFDcVNxU3ExQVExQ3FRMUAAKQFRMVEhUTFRIVExQTFBQVEhUTFRMUExUTFBMVExMUFRMUExUTFRIVExUSFRMVEhUTFRMUExUTFBMVNxM4FTcVEhUADQUAAAAA
+'1563891039516':
+  alias: Turn Air Conditioner OFF
+  sequence:
+    - service: broadlink.send
+      data:
+        host: 
+        packet:
+          - JgAkAQABK5EYNBgQFxEXEBgQFxEXNBgQFxEXERcQFzUXERcQGBAXERcQGBAXERcQGBAXNRcRFxAXERcRFxAXERc1FxAYNBgQFxEXNBgQFwACkBc1FxAYEBcRFzQYEBcRFxAYEBcRFxAYEBcRFxAYNBgQFxEXEBgQFxEXEBgQFxEXEBgQFxEXEBgQFxEXEBcRFzUXAAUhAAEqkRg0GBAXERcQGBAXERc0GBAXERcQGBAXNRcRFxAYEBcRFxAYEBcRFxAXERc1FxAYEBcRFxAYEBcRFzUXNBg0GBAXERc0GBAXAAKQFxAYEBcRFxAYEBcRFxAYEBcRFxAXERcRFxAYEBcRFxAXERcRFxAXERcRFxAXERcRFxAXERcRFxAXNRc1FxEXEBcADQUAAAAA
+'1563894723610':
+  alias: Middle Shades Down FULL
+  sequence:
+    - data:
+        host:  
+        packet:
+          - sgBYAi4TFQwVDA4TDhMOExUMFQwVDA4TDhMOExYLDhMVDA4TDhQOEhYMDhMVDBUMDhMVDA4TDhMVDBUMDhMOEw4TDhMOEw4TFQwOEw4TDhMOEw4TDhMWCw4TFgwVCw4UFQwVDA4AAZ8tExUMFQwOEw4TDhMVDBUMFQwOEw4TDhMVDA4TFQwOEw4TDhMWCw4TFQwVDA4TFgsOEw4UFQwVCw4TDhMOEw4UDRQOExUMDRMPEg4TDhMOFA0TFgwOEhYMFQwOExUMFQwOAAGeLhMVDBUMDhMOEg8SFgwVCxYMDhMOEw4TFQwOExUMDhIPEw4TFQsPEhYMFQwOExUMDRQOEhYMFQwOEw4SDxMOEg8SDxMVDA4TDhIPEg8TDRMPEhYMDhMVDBULDhMWCxYLDgACRi4SFgsWCw4TDhMOExUMFQwVDQ0UDRMPEhUMDhMWCw4TDhMOExUMDhMVDBUMDhMVDA4TDhMWCxYLDhMOEw4TDhMOEw4TFgsOEw4TDhMOEw4TDhMVDA4TFQwVDA4TFQwVDA4AAZ4uExUMFQwOEw4TDhMVDBUMFQwOEw4TDhMVDA4TFQwOEg8TDhMVDA4TFQwVDA4TFQsPEw4TFQwVDA4TDhMOEw4TDhMOExUMDhIPEw4SDxIPEg4UFQwOEhYLFgwNFBULFgsOAAGfLhMVCxYLDhMPEg8SFgsWCxYLDhMOEw4UFQsOExYLDhMOEw4TFgsPEhYLFgsOExYLDhMPEhYLFgsOEw8SDhMOEw4TDhMWDA4SDhMOEw4TDhMOFBULDhMWDBULDhMWCxYLDgAF3A==
+      service: broadlink.send
+'1563894736229':
+  alias: Middle Shades Up FULL
+  sequence:
+    - data:
+        host:  
+        packet:
+          - sgBYAi4SFQwVDA4TDhQOEhYMFQwVDA4TDhMOExUMDhMVDA4TDhMOExUMDhMVDBUMDxMVCw4UDhIWDBUMDhMOEw4TDhMOEw4TDhMVDA4TDhMOEw4TDhMWDBULFgsWDA4TFQsWDA4AAZ8uExULFgsPEw4TDhMVDBUMFQwOEw4UDRMVDA4TFQwOEw4UDRQVDA0UFQwVDA4TFQwOEw4TFQwVDA4TDhMOEw4TDhMOEw4TFQwOEw4TDhQOEg4UFQwVDBUMFQwOExUMFQwOAAGfLhMVDBUMDhMOEw4TFQwVDBUMDhMOEw4TFgsOExYLDhMOEw4TFgsOExYMFQwOExUMDhMOExUMFQwOEw4TDhMOEw4TDhMOExUMDhMOEw4TDhMOExYLFgsWDBUMDhMVDBUMDgACRS4TFQwVDA4TDhMOExUMFQwWCw8TDhIPExUMDRQVDA0UDRQOExUMDhMVDBUMDhMVDA4TDhMVDBUMDhMOEw4TDhMOEw4TDhMWCw4UDhMNEw4TDhQVDBUMFQwVDA4TFQwVDA4AAZ8uEhYLFgsPEw4TDhMVDBUMFQwOEw4TDhMVDA4TFQwOEw4TDhMVDA4TFgsWCw4TFgsOFA4SFgwVDA4TDhMOEw4TDhMOEw4TFQwOEw4TDhMOEw4TFQwVDBYLFgwNExYLFgsOAAGfLhMVDBYLDhMOEw4TFQwWCxUMDhQOEw0TFgwOExUMDhIPEw4TFQwOExUMFQwOExUMDhMOExYLFgsOEw4UDhIOEw4UDhMOExUMDhMOEw4TDhMOExUMFQwVDBUMDhMVDBUMDgAF3A==
+      service: broadlink.send
+'1563894736312':
+  alias: Left Shades Up FULL
+  sequence:
+    - data:
+        host:  
+        packet:
+          - sgBYAi0TFgsOEw4UDRQVDBUMFQwOEw4TFQwOExUMDhMVDA4TDhMOFBUMDhMVDBUMDhMVDA4TDhMVDBUMDhMOEw4TDhMOFA0UDhMVDA0UDhMOEw0UDhMVDBUMFQ0UDBUMFQ0VCxYAAZguExUMDRMOFA0UFQwVDBUMDhMOExUNDRMWDA0UFA0NFA0UDRQVDA4TFQwVDA4TFQwOEw4TFQwVDQ0UDRQOEw0UDhMOEw4TFQwOEw4TDhMOEw4UFAwWDBUMFQwVDBUMFQwVAAGZLRMVDQ0TDhMOFBQNFA0VCw4UDRQVDA4TFQwOExUMDhMOEw4UFA0NFBUMFQwNFBUMDhMOExUMFQwOEw4TDhMOEw4UDRQNExYMDRQNFA0UDhMNFBUMFQwVDBUMFQwVDBUNFAACQC0UFAwOFA0UDRMWDBUMFQwNFA4TFQwOExUMDhMVDA4TDhQNFBUMDRQVDBUMDRQVDA4TDhMVDBUMDhMOFA0TDhQNFA0UDRQVDA0UDRQOEw4TDhMVDBUNFAwVDBUNFA0UDRUAAZgtFBUMDRQNFA0UFQwVDBUMDhMOExUMDhQUDQ0UFQwNFA4TDhMVDA4TFQwVDA4TFQwOFA0UFQwVDA4TDRQNFA4TDhMOEw4TFQwOEw4TDhMOEw4UFQwVDBUMFQwVDBUMFQwVAAGZLRMVDA4TDhMOExUNFQwVDA0UDhMVDA4TFQwOExUMDhMOFA0UFQsOFBUMFQwNFBUMDhMOExUMFQwOEw4TDhMOEw4UDRMPExUMDhMNFA4TDhMOExUMFQwVDBUNFQwUDRQMFgAF3A==
+      service: broadlink.send
+'1563894736313':
+  alias: Left Shades Down FULL
+  sequence:
+    - data:
+        host:  
+        packet:
+          - sgBYAi4TFQwOEw4TDhMVDBUMFQwOFA0TFQwOFBUMDRQVDA0UDRQOExUMDhMVDBUMDhMVDA4TDhMVDRQNDRQNFA0UDhMNFA4TFQwOEw4TDhMOEw4TDhMVDA4UFQsVDBUNFQsWDBUAAZgtFBUMDRQNFA0UFQwVDBUMDhMOExUMDhQUDA4TFQwOEw4UDRQVDA0UFQwVDA0UFQwOEw4TFQwVDA4TDhMOEw4TDhQNExYLDhMOFA0UDRQNFA0UFQwOExUMFQwVDBUMFQwVAAGZLRMVDA4TDhMOExUMFQ0UDA4UDRQVDA0UFQwNFBUMDRQNFA4TFQwOExUMFQwOExUMDhMOFBQMFQwOEw4UDRQNEw4UDRQVDA4TDRQNFA0UDhMNFBUMDhMVDBUMFQwVDBUMFQACQC0TFQ0NEw4UDRQVDBQNFQwOEw4TFQwOExUMDhMVDA4TDhMOExUMDhMVDBUMDhMWDA0UDRQVDBUMDRQOEw4TDhMNFA4TFQwOEw4TDhMOEw4TDhMVDA4TFQwVDBYLFQ0UDRUAAZgtExUMDhMOEw4TFQ0UDBYLDhQNFBUMDRQVDA0UFQwOEw4TDhMVDA4TFQwVDA4TFQwOFA0UFA0VDA0UDRQNFA0UDRQOExUMDhMOEw4TDhMOEw4TFQwOExUMFQwVDBYLFQwWAAGXLhMVDA4TDhMOExUMFQwVDA4TDhMWCw4UFQsOFBUMDhMOEw4TFQwOExUMFQwOExUMDhMOExUMFQwOEw4TDhMOEw4TDhMWCw4TDhMPEg4TDhMOFBUMDhIWDBUMFQwVDBUMFQAF3A==
+      service: broadlink.send
+'1563894736314':
+  alias: Left Shades Down Partial
+  sequence:
+    - data:
+        host:  
+        packet:
+          - sgSEAy0TFgsOEw8SDxMVCxYMFQsPEw4TFQwOExUMDhMVDA4TDhMOExUMDhMWCxYLDhMWCw4UDhMVDBUMDhMOEw4TDhMOEw4TFQwOExUMDhMOEw4TDhMWCw4UFQwOEw4TDhIPEw4AAZ8uExUMDhMOEw4TFQwVDBUMDhMOExUMDhMVDA4TFQwOEw4UDRMWCw8SFgwVDA4TFQwOEw4TFQwVDA4TDhMOEw4TDhQNExYLDhMWCw4TDhMOFA4TFQwOExUMDhMOEw4TDhMOAAGfLhMVDA4TDhMOExUMFQwVDA4TDhMVDA4TFgsOExYMDRMOFA4TFQwOExUMFQwOExUMDhMOExYLFQwOEw4TDhMOEw4TDhQVDA0TFgwOEg8TDhMOExUMDhMVDA4TDhMOEw4TDgACRi4SFgwOEw4TDhMVDBUMFQwOEw4TFQwOExUMDhMVDA4TDhQOEhYMDhMVDBUMDhMVDA4TDhMVDBUMDhMOEw4TDhMOEw4TFgwNFBUMDhMOEw4TDhMVDA4TFQwOEw4TDhMOEw4AAZ8uExUMDhMOEw4TFQwVDBUMDhMOExUMDhMWCw4TFgwNFA4TDhMVDA4TFQwVDA4TFQwOEw4TFQwVDA4TDhMOEw4TDhQOExUMDhMVDA4TDhMOEw4TFQwOExUMDhMOEw4TDhMOAAGfLhMVDA4TDhMOExYLFgsWCw4UDhMVDA0UFQwOExUMDhMOEw4TFQwOExUMFQwOExYLDhMOExYLFgsOFA4SDhMOFA0UDhMVDA4TFQwOEw4TDhMOExUMDhMWCw4TDhMOEw4TDgACRi4TFQwOEw4TDhMVDBUMFQwOFA4TFQsOFBUMDhMVDA4TDhMOExUMDhMVDBUMDhMVDA4TDhQVCxYLDxMOEg8TDhMOEw4TFQwOExUMDhMOEw4TDhMWCw8TFQsOEw4TDhMOFA4AAZ8uEhYMDRMPEg4TFgsWDBUMDhMOExUMDhMVDA4TFQwOEw4TDhMWDA4TFQwVDA4TFQwOEw4TFQwVDA4TDhMOEw4TDhQNFBULDxMVDA4TDhMOEw4TFQwOExUMDhMOEw4TDhMOAAGgLRMVDA4TDhMOExYMFQsWDA4TDhMVDA4TFQwOExUMDhMOEw4UFQsOExYLFgwNFBUMDhMOExUMFQwOEw4TDhMOEw4TDhMVDA4TFgsOFA0UDhMNFBUMDhMVDA4TDhMOEw4TDgAF3AAAAAA=
+      service: broadlink.send
+'1563894736315':
+  alias: Left Shades Up Partial (Twice)
+  sequence:
+    - data:
+        host:  
+        packet:
+          - sgBYAi0TFQwOEw4TDhMWCxYLFgwOEw4TFQwOExUMDhMVDA4TDhMOFBUMDhMVDBUMDhMVDA4TDhMVDRULDhMOEw4TDhQOExUMFQwOExUMDhMOEw4TDhMOExYMFQwOEw4TDhMOEw4AAaAtExYLDhMOFA0UFQsWDBUMDhMOExUMDhMVDA4TFQwOEw4TDhMWDA4TFQwVDA4TFQwOEw4TFgsWCw8SDhMOFA4TDhMVDBUMDhMVDA4TDhMOEw4TDxMVDBUMDhMOEw4TDhMOAAGfLhMWCw4TDhMOExYMFQsWCw8TDhMVDA4TFQwOExUMDhMOFA4TFQsPExUMFQwOExUMDhMOExUMFgwOEg4TDxMOEw4TFQwVDA4TFQwOEw4TDhMOEw4TFgsWDA4TDhMOEw4TDgACRi4TFQwOEw4TDhMWCxUMFgsOFA4TFQwOExUMDhMVDA4TDhMOExYLDxIWDBUMDhMVDA4TDhMVDBUMDhMOEw4TDhMOExYLFgsPExUMDhMOEw4TDhMOExUMFgsOEw4TDxIPEg4AAaAuEhYMDhIPEw4TFQwVDBUMDhMOExYLDhMWDA0TFgwOEw4TDhMVDA4TFQwVDA4TFgsPEw4TFQwVDA4TDhMOEw4TDhMVDBYLDxIWCw4UDhIPEw4TDhMVDBUMDhMOEw4TDhMOAAGgLhIWDA4TDhMOExUMFQwVDA4TDhMWCw4TFgsOFBUMDhMOEw4TFQwOExUMFgsOExUMDhMOFBUMFQwOEw4TDhMOEw4TFQwVDA4TFgsOEw4TDhMOFA4TFQwVDA4TDhMOEw4TDgAF3A==
+      service: broadlink.send
+'1563894736316':
+  alias: Right Shades Up FULL (Twice)
+  sequence:
+    - data:
+        host:  
+        packet:
+          - sgAGAgkUFQwOExUMDhMVDBUMDgABoC0UFA0VDA0UDRQOExUMFQwVDQ0UFQwNFBUMDhMVDA4TDhQNFBQNDRQVDBUMDRQVDA4UFA0NFA0UDRQNFA0UDRQOFA0TFQ0NFA0UDRQNFA0UDRQNFBUNDRMVDQ0UFA0UDQ0AAaAuExUMFQwOEw4UDRMVDRQNFQwNFBUMDhMVDA4UFAwOEw4UDRQVDA0UFQwVDA4TFQ0NFBQNDRQNFA0UDRQNFA0UDhMOExUNDRQNFA0UDRQNFA0UDRQVDA4TFQwOExUMFQ0NAAJILRMVDRQNDRQNFA0UFA0UDRUMDhMVDA4UFA0NFBQNDRQNFA0UFQwNFBUMFQwOExUMDhQUDQ0UDRQNFA0UDRQNFA0UDhMVDQ0UDRQNFA0UDRQNFA0UFQwOExUNDRQUDRQNDQABoC4TFQwVDA0UDhQNExUNFA0UDQ0UFQwNFBUNDBQVDA4UDRQNFBQNDRQVDBUMDhMVDA0UFQ0NFA0UDRQNFA0UDRQNFA4TFQwOFA0UDRQNFA0UDRQNFBUMDhMVDA0VFAwVDQ0AAaAtFBQNFQwNFA0UDhMVDBUMFQ0NFBQNDRQVDA0UFQwNFA0UDhMVDQ0UFA0UDQ0UFA0NFBUMDRQNFA4TDhMOFA0UDRQNFBQNDRQNFA0UDRQNFA0UDhQUDQ0TFQ0NFBQNFQwNAAXcAAA=
+      service: broadlink.send
+'1563894736317':
+  alias: Right Shades Down FULL
+  sequence:
+    - data:
+        host:  
+        packet:
+          - sgBYAi0TFQ0VDA4TDhMOExUMFQwVDQ0UFQwOExUMDhMVDA4UDRQNFBUMDhMVDBUMDhMVDA4UFQwOEw4TDhMOEw4TDhQNFA0UDhMVDA4TDhMOFA0TDhQOEw4TFQwVDA4UFAwWDA0AAaEtFBUMFQwOEw4TDhMVDBUMFQ0OExUMDhMVDA4TFQ0NFA0UDRQVDA4TFQwVDQ0UFA0NFBUMDhMOEw4TDhQNEw4UDRQOEw4TFQwOFA0TDhQNFA0UDhMOExUMFQ0NExYMFQwNAAGhLRQVCxYMDhMOEw4TFQwVDBUNDRQVDA0UFQwOExUMDhMOFA0UFQwNFBUMFQwOExUNDRQVDA4TDhMOEw4TDhMOEw4UDhMOExUMDhMOEw4TDhMOEw4UDRQVDBUMDhMVDBUMDgACRy4TFQwVDA4UDRQNFBUMFQwVDA4TFQwOExUNDRQVDA4TDhMOExUNDRQUDRUMDhMVDA4TFQwOEw4TDhQOEw0UDhMOEw4TDhMWDA0UDRQOEw4TDhMOFA0TFQwWDA4TFQwVDA4AAaAuExUMFQwOEw4TDhMVDRQMFgwOExUMDhMVDA4TFQ0NFA0UDhMVDA4TFQwVDQ0UFA0NFBUMDhMOEw4TDhMOEw4UDRQOEw4TFQwOEw4UDRMOEw4UDhMOExUNFAwOFBQNFQwNAAGhLRMVDBUNDRQNFA4TFQwVDBUNDRMVDQ0UFQwNFBUMDhMOEw4UFA0NFBUMFQwOExUMDhMVDQ0UDRQNFA4TDhMOEw4TDhMOFBUMDRQNFA4TDhMOEw4TDhQUDRUMDhMVDBUMDgAF3A==
+      service: broadlink.send
+'1563894736318':
+  alias: Middle Shades Up Partial
+  sequence:
+    - data:
+        host:  
+        packet:
+          - sgCEAy0UFQwVCw4TDhQNFBUMFQwVDA4TDhMOExUMDhMVDA4TDRQOExUMDhMVDBUMDhMVDA4TDhMVDBUMDhMOEw4TDhMOExUMFQwOExUMDhMOEw4TDhMOExYLFQwOExYLFQ0VCw4AAZ8uExUMFQwOEw4TDRQVDBUMFQwOEw4TDhMVDA4TFQwOEw4TDhMVDA4TFQwVDA4TFQwOEw4TFQwVDA4TDhMOEw4TDhMVDBYMDRQUDA4UDRQNFA0UDRMWCxYMDRQVDBUMFQwNAAGfLhMVDBUMDhMNFA4TFQwVDBUMDhMOEw4TFQwOExUMDhMOEw4TFQwOExUMFQwOExUMDhMOExUMFQwOEw4TDhMOEw4TFQwVDA4TFQwOEw4TDhMOEw4TFgwUDA4TFQwWCxYLDgACRi0TFQwVDA4TDhMOExUMFQwVDA4TDhMOExYLDhMWCw4UDRQNExYLDhQVDBUMDRMWDA0UDRQVDBUMDRQOEw4TDRQNFBUMFQwOExUMDhMNFA4TDhMOExUMFQwOExUMFQwVDA4AAZ8tExUMFQwOEw4TDhMVDBUMFQwOEw4TDhMVDA4TFQwOEw4TDhMWCw4UFQsWCw4TFQ0NFA0UFAwWCw4TDhMOEw4UDRQVDBUMDhMVDA0UDhMOEw4TDRQVDBUMDhMVDBUMFQwOAAGfLRMVDBUMDhMOEw4TFQwVDBUMDhMOEw4TFQwOExUMDhMOEw4TFQwOExUMFgwNExUMDhMOExYLFgwNFA0UDRMOEw4UFQwVDA4SFgsOEw4TDhMOFA4TFQwVDA4TFQsWDBUMDQACRi4TFQwVDA4TDRMOExYLFgwVDA4TDhMNFBUMDhMVDA0UDhMOExUMDhMVDBUMDhMVDA4TDhMVDBUMDhMOEw4TDhMOExUMFQwOExUMDhMOEw4TDhMOFBQNFA0NExUMFQwWCw4AAZ8uExUMFA0NFA0TDhMVDRUMFA0NFA4TDhMVDA4TFQwNFA4TDhMVDA4TFQwVDA0UFQwNFA4TFQwVDA4TDhMOEw4TDhMVDBUMDhMVDA4TDhMOEw4TDhMVDBUMDhMVDBUMFQwOAAGfLRQVCxYMDRQNFA0TFgwVDBQNDhMNFA0UFQwNFBUMDRQOEw0UFQwOExUMFQwNFBUMDhMOExUMFQwOEw4TDhMOEw4TFQwVDA4TFQwOEw4TDhMOEw4TFQwVDA4TFQwVDBUMDgAF3AAAAAA=
+      service: broadlink.send
+'1563894736319':
+  alias: Middle Shades Down Partial
+  sequence:
+    - data:
+        host:  
+        packet:
+          - sQBYAi0TFQwVDA4TDhMOExUMFQwVDQ0UDRMOExUNDRQVDA0UDRQNFBQNDRQUDRUMDRQVDA0UDhMVDBUMDRQOEw0UDRQNFA4TFQwOExUMDhMOEw0UDhMVDA4TFQwOExUMFQwVDA4AAZ8tExUMFQwOEw4TDhQUDBUMFQ0NFA0UDRMVDQ0UFA0NFA0UDRQUDQ0UFQwUDQ0UFQwNFA0UFQwVDA0UDRQNFA0UDRQNFBUMDhMVDA0UDhMNFA0UFQwNFBUMDhMVDBUMFQwOAAGfLRMVDBUMDhMOEw4TFQwVDBUNDRMOEw4TFQwOExUMDhMOEw4UFAwOFBQMFQ0NExUNDRQNExUNFA0NFA0UDRQNEw4UDRQUDQ0UFA0NFA0TDhMOFBUMDRMWDA0TFgsVDBUNDQACRi0TFQ0UDQ0TDhMOExUNFA0UDQ0UDRQNFBUMDRQUDQ0UDRQNFBUMDRQUDRUMDRQUDQ0UDRQVDBUMDRQNFA0UDRQOEw4TFQwOExUMDhMOEw4TDhMVDA4TFQwOExUMFQ0UDQ0AAZ8tFBQNFA0NFA0UDRQUDRQNFQwNFA0UDRQVDA0UFQwNFA0UDRQVDA0UFQwVDA0UFQwOEw4TFQwVDA4TDhMNFA4TDhMOExUMDhMVDA4TDhQNEw4TFQwOExUMDhQUDBUMFQ0NAAGfLRQUDRQNDRQNFA0UFA0UDRQNDhMOEw0UFQwNFBUMDRQNFA0UFQwNFBUMFQwNFBUMDhMOExUMFQwOFA0UDRMOEw4TDhMVDQ0UFAwOEw4UDRMOFBQMDhQUDA4TFQ0UDRQNDQAF3A==
+      service: broadlink.send
+'1263854736319':
+  alias: Green House Fan Lights On
+  sequence:
+    - data:
+        host:  
+        packet:
+          - shw0AAgbGQkZCRkJCBsZCQgbCBsZCRkJGQkZCQgaCBoIGwgbCBoIGggbCBsZCQgaCBsZCQgAARgAAAAA
+      service: broadlink.send
+'1363894736319':
+  alias: Green House Fan Lights Off
+  sequence:
+    - data:
+        host:  
+        packet:
+          - shw0AAgbGQkZCRkJCBsZCggbCBsZCRkJGQkaCQgbCBsIGwgaCBoIGggbCBoIGwgaCBsaCQgAARgAAAAA
+      service: broadlink.send
+'1463894736319':
+  alias: Green House Fan High
+  sequence:
+    - data:
+        host:  
+        packet:
+          - shw0AAgbGgkZCRkJCBoZCQgaCBsaCRkJGQkZCQgbCBsIGwgaGgkZCQgbCBoIGwgbCBoZCQgAARgAAAAA
+      service: broadlink.send
+'1963894736319':
+  alias: Green House Fan Medium
+  sequence:
+    - data:
+        host:  
+        packet:
+          - shw0AAgbGQkZCRkJCBoZCggbCBsZCRkKGQkZCQgaCBsIGwgbCBsZCQgbCBoIGwgbCBsZCQgAARgAAAAA
+      service: broadlink.send
+'1563294736319':
+  alias: Green House Fan Low
+  sequence:
+    - data:
+        host:  
+        packet:
+          - shw0AAgbGQkZChkJCBsZCQgbBxsZCRkJGgkZCQgbCBsIGwgaGgkIGwgbCBsIGwgbCBsZCQgAARgAAAAA
+      service: broadlink.send
+'1563194437819':
+  alias: Green House Fan All Off
+  sequence:
+    - data:
+        host:  
+        packet:
+          - b21c3400081b19091a091909081b1a09081b081b1909190919091909081a091a081b081b081b081b081b081b081b081b081a19090800011800000000
+      service: broadlink.send
+'1564461024448':
+  alias: All Full Down
+  sequence:
+    - data: {}
+      service: script.1563894736317
+    - delay:
+        seconds: 3
+    - service: script.1563894723610
+    - delay:
+        seconds: 3
+    - service: script.1563894736313
+
+'1464651024448':
+  alias: All Full Up
+  sequence:
+    - data: {}
+      service: script.1563894736229
+    - delay:
+        seconds: 3
+    - service: script.1563894736312
+    - delay:
+        seconds: 3
+    - service: script.1563894736316
+
+'1564491024448':
+  alias: All Tilt Down
+  sequence:
+    - data: {}
+      service: script.1563894736319
+    - delay:
+        seconds: 3
+    - service: script.1563894736314
+    - delay:
+        seconds: 3
+    - service: script.1563894736317
+
+'1564461614448':
+  alias: All Tilt Up
+  sequence:
+    - data: {}
+      service: script.1563894736318
+    - delay:
+        seconds: 3
+    - service: script.1563894736315
+    - delay:
+        seconds: 3
+    - service: script.1563894736316
+    
+'2318649121162':
+  alias: Left_Shades_Control_Pop_Up
+  sequence:
+    - event: browser_command
+      event_data:
+        command: popup
+        title: Left Shades Control
+        card:
+          type: picture-elements
+          image: /local/Background_IMG_E5.png
+          elements:
+           -  image: /local/Air Conditioner UI/small.png
+              style:
+                  left: 73.9%
+                  top: 27.5%
+                  width: 48.5%
+              type: image
+            
+           -  image: /local/Air Conditioner UI/small.png
+              style:
+                  left: 73.9%
+                  top: 72.7%
+                  width: 48.5%
+              type: image
+            
+           -  image: /local/Air Conditioner UI/small.png
+              style:
+                  left: 26.8%
+                  top: 72.7%
+                  width: 48.5%
+              type: image
+           
+           -  image: /local/Air Conditioner UI/small.png
+              style:
+                  left: 26.8%
+                  top: 27.5%
+                  width: 48.5%
+              type: image
+            
+           -  image: /local/Air Conditioner UI/down_arrow.png
+              style:
+                  left: 74.1%
+                  top: 72.7%
+                  width: 21%
+              tap_action:
+                  action: call-service
+                  service: script.1563894736313
+              type: image
+            
+           -  image: /local/Air Conditioner UI/up_arrow.png
+              style:
+                  left: 74.1%
+                  top: 26.%
+                  width: 22%
+              tap_action:
+                  action: call-service
+                  service: script.1563894736312       
+              type: image
+           
+           -  image: /local/Blinds/Tilt-Up.png
+              style:
+                  left: 26.8%
+                  top: 26.%
+                  width: 32%
+              tap_action:
+                  action: call-service
+                  service: script.1563894736315
+              type: image
+           
+           -  image: /local/Blinds/Tilt-Down.png
+              style:
+                  left: 26.8%
+                  top: 72.7%
+                  width: 32%
+              tap_action:
+                  action: call-service
+                  service: script.1563894736314
+              type: image
+              
+'2419549121162':
+  alias: Right_Shades_Control_Pop_Up
+  sequence:
+    - event: browser_command
+      event_data:
+        command: popup
+        title: Right Shades Control
+        card:
+          type: picture-elements
+          image: /local/Background_IMG_E5.png
+          elements:
+           
+           -  image: /local/Air Conditioner UI/small.png
+              style:
+                  left: 73.9%
+                  top: 27.5%
+                  width: 48.5%
+              type: image
+            
+           -  image: /local/Air Conditioner UI/small.png
+              style:
+                  left: 73.9%
+                  top: 72.7%
+                  width: 48.5%
+              type: image
+           
+           -  image: /local/Air Conditioner UI/small.png
+              style:
+                  left: 26.8%
+                  top: 72.7%
+                  width: 48.5%
+              type: image
+         
+           -  image: /local/Air Conditioner UI/small.png
+              style:
+                  left: 26.8%
+                  top: 27.5%
+                  width: 48.5%
+              type: image
+  
+           -  image: /local/Air Conditioner UI/down_arrow.png
+              style:
+                  left: 74.1%
+                  top: 72.7%
+                  width: 21%
+              tap_action:
+                  action: call-service
+                  service: script.1563894736317
+              type: image
+   
+           -  image: /local/Air Conditioner UI/up_arrow.png
+              style:
+                  left: 74.1%
+                  top: 26.%
+                  width: 22%
+              tap_action:
+                  action: call-service
+                  service: script.1563894736316      
+              type: image
+  
+           -  image: /local/Air Conditioner UI/up_arrow.png
+              style:
+                  left: 26.8%
+                  top: 26.%
+                  width: 32%
+              tap_action:
+                  action: call-service
+                  service: script.1563894736316 
+              type: image
+    
+           -  image: /local/Air Conditioner UI/down_arrow.png
+              style:
+                  left: 26.8%
+                  top: 72.7%
+                  width: 32%
+              tap_action:
+                  action: call-service
+                  service: script.1563894736317
+              type: image
+              
+'3419549121162':
+  alias: Green_House_Fan_Controller
+  sequence:
+    - event: browser_command
+      event_data:
+        command: popup
+        title: Fan Speed Control
+        card:
+          type: picture-elements
+          image: /local/Background_IMG_E5.png
+          elements:
+           -  image: /local/Fan Controller/Low.png
+              style:
+                  left: 50%
+                  top: 15%
+                  width: 93%
+              type: image
+              tap_action:
+                  action: call-service
+                  service: script.1563294736319
+           -  image: /local/Fan Controller/Medium.png
+              style:
+                  left: 50%
+                  top: 38%
+                  width: 92.3%
+              type: image
+              tap_action:
+                  action: call-service
+                  service: script.1963894736319
+           -  image: /local/Fan Controller/High.png
+              style:
+                  left: 50%
+                  top: 61%
+                  width: 93%
+              type: image
+              tap_action:
+                  action: call-service
+                  service: script.1463894736319
+           -  image: /local/Fan Controller/Off.png
+              style:
+                  left: 49.7%
+                  top: 84%
+                  width: 93%
+              type: image
+              tap_action:
+                  action: call-service
+                  service: script.1363894736319
+                  
+'4423863132162':
+  alias: Office_Air_Conditioner_Controller
+  sequence:
+    - event: browser_command
+      event_data:
+        command: popup
+        title: Office AC Control
+        card:
+          entity: climate.office_ac
+          type: thermostat
+          name: Office AC
+          theme: Smart - Light
+          
+'5424862132962':
+  alias: Isaac_Room_Air_Conditioner_Controller
+  sequence:
+    - event: browser_command
+      event_data:
+        command: popup
+        title: Isaac's Room AC Control
+        card:
+          entity: climate.isaac_room_ac
+          type: thermostat
+          name: Isaac's Room AC
+          theme: Smart - Light
+          
+'5424862152962':
+  alias: Master_Bedroom_Air_Conditioner_Controller
+  sequence:
+    - event: browser_command
+      event_data:
+        command: popup
+        title: Master Bedroom AC Control
+        card:
+          entity: climate.master_bedroom_ac
+          type: thermostat
+          name: Master Bed AC
+          theme: Smart - Light
+          
+'5424464132962':
+  alias: Dining_Room_Air_Conditioner_Controller
+  sequence:
+    - event: browser_command
+      event_data:
+        command: popup
+        title: Dining Room AC Control
+   b        card:
+          entity: climate.dining_room
+          type: thermostat
+          name: Dining Room AC
+          theme: Smart - Light  
+          
+'5934464132962':
+  alias: Grandma_Room_Air_Conditioner_Controller
+  sequence:
+    - event: browser_command
+      event_data:
+        command: popup
+        title: Grandma Room AC Control
+        card:
+          entity: climate.grandma_s_room
+          type: thermostat
+          name: Grandma AC
+          theme: Smart - Light  
+
+'856359337811':
+  alias: One Up
+  sequence:
+    - data:
+        host:  
+        packet:
+          - sgBIA6M0GA0MGhgNDBkYDgwZDBkMGgwaCxoYDRgODBkYDQwaDBkMGgwZDBoLGhgNDBoYDQwaGA0MGRgODBkMGQwaDBkYDgwZDBoMGRgOCxoMGQwaFwABJKM0GA0MGhgNDBkYDgwZDBoLGgwaDBkYDRkNDBkYDQwaCxoMGgwZDBoLGhgNDBoYDQwaGA0MGhgNDBkMGgwZDBoXDgwaDBkMGRkNCxoMGQwaGAABJKI0GA0MGhgNDBoYDQwZDBoLGwsaDBkYDhgNDBkYDgwZDBoMGQwaCxoMGRgOCxoYDQwaGA0MGhgNDBkNGQwZDBoYDgsaDBkMGhgNDBkMGgwZGAABMKM0GA0MGhcODBoXDgsaDBkMGgwaCxoYDRgOCxoYDQwaCxoMGgsaDBoMGRgNDBoYDQwaGA0MGRgODBkMGgsaDBkYDgwZDBoMGRgOCxoMGQwaGAACEaI0GQ0MGRgNDBoYDQwZDBoMGQwaDBkYDhgNDBkYDgwZDBoMGQwaDBkMGRkNCxoYDQwaGA4LGhgNDBoMGQwZDBoYDgsaDBkMGhgNGA0ZDRgNDAABKaM0GA0MGRkNDBkZDQwZDBkMGgwZDRkYDRgODBkYDQwaDBkMGgwZDBoLGhgNDBoYDQwaGA0MGhgNDBkMGgwZDBkYDgwaCxoMGRgOGA0YDRgOCwABMqM0GA0MGRkNDBkYDQwaDBkMGgwaCxoYDRgNDBoYDQwaCxoMGgwZDBkMGhgNDBkYDgwaGA0MGRgODBkMGQwaDBkYDgwZDBkMGhgNGA4YDRgNDAABKqM0GA0MGhgNDBkZDQwZDBoMGQwaDBkYDhgNDBkZDQsaDBoMGQwaCxoMGRgODBkYDQwaGQwMGhgNDBoLGgwZDBoYDgsaDBkMGhgNGA0ZDRgNDAABKqI0GQ0MGRgNDBoYDQwaCxoMGgwZDBoYDRgNDBoYDQwZDBoMGQwaDBkMGRkNDBkYDQwaGQ0MGRgNDBoMGQwaCxoYDgsaDBoLGhgNGA0ZDRgNDAABKqM0GA0MGRkNDBkYDQwaDBkMGgwaCxoYDRgNDBoYDQwZDBoMGgwZDBoMGRgNDBoYDQwaGA0MGRkNDBkMGgwZDBkYDgwZDBoMGRgOGA0YDRgODAAF3A==
+      service: broadlink.send
+
+'856359337812':
+  alias: One Down
+  sequence:
+    - data:
+        host:  
+        packet:
+          - sgD0AqI1Fw4LGxcOCxsXDgsaCxsKHAobCxoXDhgOCxsWDwsaCxsLGgsbCxoLGhgOCxoXDgscFw4LGhcOCxsLGgsbCxoXDwsaCxsXDhcOCxoLGxcOFwABJaI1Fw4LGhgNDBoXDgsbCxoLGwsaCxsXDhcOCxsXDgsbCxoLGwsaCxsLGhcOCxsXDgsbFw4LGxcOCxoLGwsaCxoYDgsbCxoXDhgOCxoLGhgOFwABJKI1Fw4LGxcOCxoYDgsaCxoLGwsbCxoXDxcOCxoXDwsaCxsLGgsbChsLGhcOCxsXDgsbFw8KGxcOCxoMGgsaCxoYDgwaCxoXDxcOCxoLGxcOFwACA6E1GA4LGhcOCxsXDgsaCxsLGwobCxoYDhcOCxoYDgsaCxsLGwobCxoLGhgOCxoYDQwbFg8LGhgNDBoLGwobCxoXDwsaCxsXDhcOFw8XDgsaCwABK6E1Fw8KGxcOCxsXDgsbChsLGwsaCxoYDhcOCxoYDgsaCxsLGwobCxoLGxcOCxoXDgsbGA4LGhcOCxsLGgsbCxoXDwsaCxsXDhcOGA4XDgsaCwABK6I1Fw4LGxcOCxsXDgsaCxsLGwobCxoXDhgOCxoXDgwaCxsLGgsbCxoLGhgOCxoXDgsbFw8LGhcOCxsLGgsaCxsXDgwaCxoYDhcOFw4YDgsaCwABKqI1Fw4LGxcOCxoYDgsaCxoLGwsaDBoXDxcOChsXDgsbCxoMGgsaCxsLGhgOChsXDgsbFw8KGxcOCxoMGgsaCxoYDgsbCxoXDhgOFw4XDwsaCwABK6I1Fw4LGhgOChsXDgsbCxoLGwsaCxsXDhcPChsXDgsbChsLGwsaCxsKGxcOCxsXDgsbFw4LGhgOCxoLGgwaCxoXDwsaCxsXDhcPFw4XDgsaDAABKqI1Fw4LGxcOCxsXDgsaCxoLHAobCxoXDhgOCxoXDwobCxsLGgsbChsLGhcODBoXDgsbFw4LGxcOCxoLGwsaCxsXDgsbCxoXDxcOFw4YDgobCwAF3AAAAAA=
+      service: broadlink.send
+      
+'856359337813':
+  alias: Two Up
+  sequence:
+    - data:
+        host:  
+        packet:
+          - sgGEAxgOCxoYDQwaCxoMGgwZDBoLGhgNDBkZDQwaGA0MGhgNDBkMGQwaGA0MGgwaCxoMGRgOCxoMGQwaGAABMKM0Fw4MGRgOCxoYDQwaCxoMGgwZDBoYDRgNDBoYDQwaCxoMGgsaDBkMGhgNDBkZDQwaGA0LGhgNDBoMGQwaGA0MGgsaDBoLGhgNDBoLGgwZGAABKaM0GA0MGhgNDBkYDgwZDBoLGgwaCxoYDRgODBkYDQwaDBoLGgwZDBoMGRgOCxoYDQwaGA0MGhgNDBkMGgwZGA0MGgwaDBkMGRgODBkMGgsaGAABNaM0GA0MGhcOCxoYDQwaCxoMGgwZDBoYDRgNDBoYDQwaCxoMGQwaDBkMGhgNDBkYDgwZGQ0MGRgOCxoMGQwaFw4MGgsaDBoLGhgNDBkMGgwZGAABKqM0GA0MGhgNDBkYDQwaDBkMGgwaCxoYDRgNDBoYDQwaCxoMGgwZDBoLGhgNDBoYDQwaGA0MGhgNDBkMGgsaGA0MGgwZDBoLGhgOCxoMGQwaGAACa6I1Fw4LGhgNDBoYDQwZDBoLGwwZDBkZDBkNDBkYDgwZDBoMGQwaCxoMGRgODBkYDQwaGA0MGhgNDBkMGgwZGA4LGgwaDBkMGhcOGA0YDhgNDAABKaI0GA4LGhgNDBoYDQwZDBoMGgsaDBkYDRkNDBkYDgsaDBoLGgwZDBoMGRgODBkYDQwaGA0MGhgNDBkMGgwZGA4LGgwaDBkMGRgOGA0YDRkNDAABKqI0GA0MGhgNDBoYDQwZDBoLGwsaDBkYDhgNDBkYDgsaDBoLGgwaCxoMGRgOCxoYDQwaGA0MGhgNDBkMGgwZGA4LGgwaDBkMGRkNGA0YDhcODAABKaI0GA4LGhgNDBoYDQwZDBoMGQwaDBkYDhgNDBkYDgsaDBoMGQwaCxoMGRgOCxoYDQwaGA0MGhgNDBkMGgwZGA0MGgwaDBkMGRgOGA0YDRkNDAABKaM0GA0MGhgNDBkZDQwZDBkMGwsaCxoYDRgODBkYDQwaDBoLGgwZDBoLGhgNDBoYDQwaGA0MGhcODBkMGgsaGA0MGgwaCxoMGRgOFw4YDRgNDAABKqM0GA0MGhgNDBkYDgwZDBkMGgwaCxoYDRgOCxoYDQwZDRkMGgsaDBoLGhgNDBoYDQwaGA0MGRgOCxoMGQwaGA0MGgwZDBoMGRgOGA0YDRgNDAAF3AAAAAA=
+      service: broadlink.send
+      
+'856359337814':
+  alias: Two Down
+  sequence:
+    - data:
+        host:  
+        packet:
+          - sgBIA6M0GA0NGRgNDBoYDQwZDBkNGQ0ZDBkZDBkNDBkZDA0ZDBoMGQwZDRkMGRgODBkYDQwaGA0MGhgNDBkNGQwZGA0MGg0ZDBkYDRkNDBkMGRkNGAABI6M0GA0MGRkNDBkYDQ0ZDBkMGgwZDRkYDRgNDRkYDQwaDBkMGgwZDBkNGRgNDBkZDQwaGA0MGRkNDBkMGQ0ZGA0MGgwZDRkYDRgNDBoMGRgNGQABI6M0GA0MGRkNDBkYDQ0YDRkMGgwZDRkYDRgNDBoYDQwZDBoMGQ0ZDBkMGRkNDBkZDA0ZGQ0MGRkMDRkMGQwaGA0MGQ0ZDBoYDRgNDBkMGhgNGAABMKMzGQ0MGRkMDRkYDQwZDRkMGgwZDBkZDRgNDBoYDQwZDBoMGQwaDBkMGRkNDBkYDQ0ZGQwNGRgNDRkMGQwZGQ0MGQ0ZDBkZDRgNDBkNGBkNGAACEaM0GA0NGRgNDBkZDQwZDBoMGQwaDBkYDRkNDBkYDQ0ZDBoMGQwZDBoMGRgNDBoYDQwaGA0MGhgNDBkMGQ0ZGA0MGgwZDRkYDRgNGQ0YDQwZDQABKKM0GA0MGhgNDBkZDQwZDBkNGQwaDBkYDRkNDBkYDQwaDBoMGQwZDRgNGRkMDRkYDQwaGA0MGRkNDBkMGQ0ZGA0MGgwZDRkYDRkMGQ0YDQwZDQABKaM0GA0MGRkNDBkYDQ0ZDBkMGgwZDRgZDRgNDBoYDQwZDRkMGQ0ZDBkMGRkNDBkZDQwZGQ0MGRgNDRkMGQwZGQ0MGgwZDBkZDRgNGQwZDQwZDAABKaM0GA0MGRkNDBkZDA0ZDBkMGgwZDRkYDRgNDRkYDQwZDRkMGgwZDBkMGhgNDBkZDQwZGQ0MGRkMDRkMGQwaGA0MGgwZDBkZDRgNGQwZDQwZDAABKqM0GA0MGRkNDBkZDAwaDBkMGgwZDBkZDRgNDBoYDQwZDBoMGQwaDBkMGRkNDBkYDQ0ZGQwNGRgNDBkNGQwZGQwNGQ0ZDBkYDRkMGQ0YDQwZDQABKaM0GA0MGhgNDBkZDQwZDBkMGgwZDRkYDRkMDRkYDQwZDBoMGgwZDBkMGhgNDBkZDQwZGQ0MGRgNDBoMGQwaGA0MGQ0ZDBkZDRgNGA0ZDA0ZDAAF3A==
+      service: broadlink.send
+      
+'856359337815':
+  alias: Three Up
+  sequence:
+    - data:
+        host:  
+        packet:
+          - sgD0AqM0GA0MGhgNDBkYDQ0ZDBkMGgwZDBoYDRgNDRkYDQwZDBoMGQwaDBkMGRkNDBkYDQ0ZGA0MGhgNDBoLGgwZGA0ZDQwZDBoMGRgNDBoMGQwZGQABI6I0GA0NGRgNDBoYDQwZDBkMGgwaDBkYDRgNDBoYDQwZDRkMGQ0ZDBkMGRkNDBkZDA0ZGA4MGRgNDBkNGQwZGA4YDQwZDRkMGRgOCxoMGQwZGQABI6MzGQwNGRgNDBkZDQwZDBkMGgwZDBoYDRgNDBoYDQwZDBoMGgwZDBkMGRkNDBkYDQwaGA0NGRgNDBoMGQwZGA0ZDQwaDBkMGRgNDRkMGQwZGQACr6I0GA4MGRgNDBkZDQwZDBkMGgwZDRkYDRkMDRkYDQwZDBoMGQ0ZDBkMGRkNDBkZDAwaGA4LGhgNDBkMGgwZGA0ZDQwaDBkMGRgNGQ0YDRgNDAABKaMzGQ0MGRgNDBoYDQwZDBkNGQwaDBkYDRkNDBkYDQwZDBoMGQ0ZDBkMGhgNDBkZDQsaGQ0MGRgNDBoMGQwZGQwZDQ0ZDBkMGhgNGA0YDRkNDAABKaM0GA0MGRgNDBoYDQwZDRkMGgwZDBkZDBkNDBkZDAwaDBoMGQwZDRgNGRgNDBoYDQwaGA0MGRkMDRkMGQwaGA0YDQ0ZDBkMGhgNGA0YDRkNDAABKKM0GA0NGRgNDBkZDA0ZDBkMGgwZDBoYDRgNDRkYDQwZDBoMGQwZDRkMGRkNDBkYDQwaGA0MGhgNDBkMGQ0ZGA0ZDQwZDBoMGRkMGQ0YDRgNDAABKqMzGQ0MGRgNDBoYDQwZDBoMGQwaDBkYDRkNDBkYDQwZDRkMGgwZDBkNGBkNDBkZDA0ZGQ0MGRgNDBoMGQwZGQ0YDQ0ZDBkMGRkNGA0YDRkNDAABKaMzGQ0MGRkNDBkZDAwaDBkMGgwZDBkZDRgNDBkZDQwZDBoMGQwZDBoMGRkMDBoYDQwaGA0MGRkNDBkMGQwaGA0YDgwZDBkNGRgNGA0ZDRgNDAAF3AAAAAA=
+      service: broadlink.send
+      
+'856359337816':
+  alias: Three Down
+  sequence:
+    - data:
+        host:  
+        packet:
+          - sgBIA6M0GA0MGRkNDBkYDQwZDBoMGgwZDBkZDBkNDBkZDAwaDBkNGQwZDBoMGRgNDBkZDQwaGA0MGRgNDRkMGQwZGQ0YDgwZDBkYDhgNDBkMGhgNGAABI6MzGQ0MGRgNDRkYDQwZDRkMGQ0ZDBkZDRgNDBkZDA0ZDBoMGQwZDRkMGRkMDBoYDQwaGA0MGRkNDBkMGQ0ZGA0YDgwZDBkZDRgNDBkMGhgNGAABI6M0GA0MGhgNDBkYDQwaDBkMGgwZDBkZDRgNDBkZDQwZDBoMGQwZDRkMGRkNDBkYDQwaGA0MGhgNDBkMGQ0ZGA0YDgwZDBoYDRgNDBkNGRgNGQABL6MzGQwNGRgNDBoYDQwZDBkNGQwaDBkYDRkMDRkYDQwZDRkMGgwZDBkMGhgNDBkZDA0ZGQ0MGRkMDRkMGQwZGQ0YDQwaDBkYDRkNDBkMGRkNGAACEaM0GA0MGRkNDBkYDQwaDBkMGgwZDBkZDBkNDBkZDA0ZDBoMGQwZDBkNGRkMDBoYDQwaGA0MGRkNDBkMGQwaGA0YDgwZDBkZDRgNGQwZDA0ZDAABMKM0GA0MGRkNDBkYDgsaDBkMGgwZDBkZDRgNDBkZDA0ZDBkNGQwZDRgNGRgNDBkZDA0ZGQ0MGRgNDRgNGQwZGQ0YDQ0YDRkYDRkNGA0YDQwZDQABKqM0GA0MGRkNDBkYDQ0ZDBkMGgwZDBoYDRgNDBkZDA0ZDBoMGQwZDBoMGRgNDBoYDQwaGA0MGRkNDBkMGQ0ZGA0YDgwZDBkZDRgNGA0ZDQwZDAABKaI0GQwNGRgNDBkZDQwZDBkNGQ0YDRkYDRkMDRkYDQwZDRkNGA0ZDBkMGRkNDBkYDQ0ZGQ0MGRgNDBkNGQwZGQwZDQwZDRkZDBkMGQ0YDQwaDAABKaM0GA0MGRkMDRkYDQwZDRkMGgwZDBkZDRgNDBkZDQwZDBkNGQwZDBoMGRkMDBoYDQwaGA0MGRkNDBkMGQwZGQ0YDgwZDBoYDRgNGA0ZDA0ZDAABKaM0GA0NGBkNDBkZDA0ZDBkMGgwZDRkYDRgNDRkYDQwZDRkMGQ0ZDBkMGhgNDBkYDQ0ZGQwNGRgNDBkNGQwZGA0ZDQwZDRkYDRkMGQ0YDQwZDQAF3A==
+      service: broadlink.send
+      
+'856359337817':
+  alias: Four Up
+  sequence:
+    - data:
+        host:  
+        packet:
+          - sgBIA6MzGQ0MGRgNDBkZDQwZDBoMGQwaDBkYDRkNDBkYDgsaDBkNGQwZDBoMGRgNDBoYDQwaGA0MGRgODBkMGRkMDBoMGgwZDBkMGhgNDBkMGgwZGAABI6M0GA0MGhgNDBkYDQwaDBkMGgwZDBoYDRgNDBoYDQwZDBoMGQwaCxoMGRgODBkYDQwaGA0NGRgNDBkMGhgNDBkMGgwaCxoMGRgNDBoMGQwaGAABI6I0GA4MGRgNDBoYDQwZDBoMGQ0ZDBkYDRkNDBkYDQwaDBkMGgwZDBoLGhgNDBkZDQwZGQ0MGRgNDBoMGRgNDBoLGwwZDBkMGhgNDBkMGgsaGAABMKI0GA0MGhgNDBkYDgwZDBkMGgwZDBoYDRgNDBkZDQwZDBoMGQwaDBkMGRkNDBkYDQwaGA0MGhgNDBkNGRgNDBkMGgwaDBkMGRgNDRkMGQwaGAACEKI0GA0NGRgNDBoYDQwZDBkMGgwaDBkYDRkNDBkYDQwZDRkMGgsaDBkNGRgNDBoYDQwaGA0MGRkMDBoMGRgNDRkMGQ0ZDBkMGhgNGA0ZDRgNDAABKaI0GA0MGhgNDBkZDQwZDBkMGgwZDBoYDRgNDBoYDQwZDRkMGQ0ZDBkMGRkNDBkZDA0ZGQwNGRgNDBoMGRgNDBoMGQwaDBkMGRkNGA0YDRkNDAABKaM0GA0MGRkMDRkYDQwaDBkMGgwZDBkZDRgNDBkZDA0ZDBoMGQwZDRkMGRgNDBoYDQwaGA0MGRkNDBkMGRkNDBkMGgwZDBkNGRgNGA0ZDRgNDAABKaMzGA4MGRgNDBkZDQwZDBkMGgwaDBkYDRkMDRkYDQwZDRkNGQwZDBkMGhgNDBkZDA0ZGQ0MGRgNDRkMGRgNDRkMGQ0ZDBkMGRkNGA0ZDBkNDAABKaM0GA0MGhgNDBkYDQwaDBkMGgwZDRkYDRgNDBoYDQwZDBoMGQwaDBkMGRkNDBkZDAwaGQwNGRgNDBoMGRgNDBkMGgwaDBkMGhgNGA0YDRkMDQABMaMzGQ0MGRgNDBkZDQwZDBkMGgwZDRkYDRgNDBoYDQwZDRkMGQwaDBkMGhgNDBkYDQ0ZGQwNGRgNDBkNGRgNDBkMGgwZDRkMGRgNGQ0YDRkMDAAF3A==
+      service: broadlink.send
+
+'856359337818':
+  alias: Four Down
+  sequence:
+    - data:
+        host:  
+        packet:
+          - sgD0AqM0GA0MGRkNDBkZDAwaDBkMGgwZDBoYDRgNDBkZDQwZDBoMGQwZDRkMGRkNDBkYDQwaGA0MGhgNDBkMGRkNDBkNGQwZDBoYDRgNDBoMGRgNGQABIqM0GA0MGRkNDBkZDA0ZDBkMGgwZDBoYDRgNDBkZDQwZDBoMGQwZDBoMGRgNDBoYDQwaGA0MGRkMDRkMGRkNDBkMGgwZDBkZDRgNDBkMGhgNGAABI6M0GA0MGRkNDBkYDQwaDBkMGgwZDBkZDRgNDBoYDQwZDBoMGQwZDRkMGRgNDRkYDQwaGA0MGRkNDBkMGRkMDRkMGgwZDBkZDRgNDBoLGhgNGAACHKMzGQ0MGRkMDBoYDQwZDBkNGQ0ZDBkYDRkMDRkYDQwaDBkNGQwZDBkNGRgNDBoYDQwaGA0MGRkMDRkMGRkMDRkMGgwZDBoYDRgNGQwZDQwZDAABKaM0GA0MGRkMDRkYDQwZDBoMGgwZDBkZDRgNDBkZDQwZDBoMGQwZDRkMGRkMDRkYDQwaGA0MGRkNDBkMGhgNDBkMGgwZDBoYDRgNGQ0YDQwZDAABKqMzGQ0MGRkNDBkYDQwZDRkMGgwZDBkZDBkNDBkZDA0ZDBoMGQwZDBoMGRgNDRkYDQwaGA0MGRkNDBkMGRkNDBkMGgwZDBkZDRgNGQwZDQwZDAABKaM0GA0MGRkMDRkYDQ0ZDBkMGgwZDBkZDRgNDBkZDQwZDBoMGQwZDRkMGRkMDRkZDAwaGA0MGRkNDBkNGRgNDBkMGgwaDBkYDRkNGA0YDQwZDQABKaM0GA0MGRkNDBkYDQwaDBkMGgwZDBkZDRgNDBkZDQwZDBoMGQwZDRkMGRkMDRkYDQwaGA0MGRkNDBkMGRkNDBkMGgwZDBoYDRgNGQwZDQwZDAABKqMzGQ0MGRgNDRgZDQwZDBoMGQ0ZDBkZDBkNDBkYDQ0ZDBkNGQwZDBoMGRgNDRkYDQwaGA0MGRkNDBkMGRkNDBkMGgwZDBkZDRgNGA0ZDQwZDAAF3AAAAAA=
+      service: broadlink.send
+
+
+'856359337821':
+  alias: One Pause
+  sequence:
+    - data:
+        host:  
+        packet:
+          - sgBQAaMzGQ0MGRkNDBkYDQwZDRkMGQ0ZDBkZDRgNDBkZDQwZDBoMGQwZDRkMGRkMDRkYDQwaGA0MGhgNDBkMGQ0ZDBkZDQwZGQ0MGRgNDBoYDQwZGQABI6MzGQ0MGRkNDBkYDQ0YDRkMGgwZDBkZDRgNDBkZDQwZDBoMGQwaDBkMGRkMDRkYDQwaGA0MGRkNDBkMGQ0ZDBkYDgwZGA0NGRgNDBkZDQwZGAABI6M0GA0MGhgNDBkZDAwaDBkMGgwZDBkZDRgNDBkZDQwZDBoMGQwZDRkMGRkMDRkYDQwaGA0MGhgNDBkMGQwaDBkYDgwZGQwNGRgNDBkZDQwZGAABNqM0GA0MGRkMDRkYDQwaDBkMGQ0ZDBkZDRgNDBkYDQwaDBkNGQwZDBkNGRgNDBkZDQwaGA0MGRgNDBoMGQwZDBoYDQ0ZGA0MGRkNDBkZDAwaGAAF3AAAAAAAAAAA
+      service: broadlink.send
+
+'856359337822':
+  alias: Two Pause
+  sequence:
+    - data:
+        host: 
+        packet:
+          - sgD8AKM0GA0MGRkNDBkZDQwZDBkNGQ0YDRkYDRkNDBkYDQwZDRkNGQwZDBkNGRgNDRkYDQwaGA0MGRkNDBkMGQ0ZGA0MGgwZGQ0MGRgNDRkYDQwZGQABI6MzGQ0MGRkNDBkYDQwaDBkMGgwZDBkZDRgNDBoYDQwZDBoMGQ0ZDBkMGhgNDBkZDA0ZGQ0MGRgNDBoMGQwZGQwNGQ0ZGA0NGRgNDBkZDA0ZGAABI6QzGQ0MGRgNDBkZDQwZDBoMGQ0ZDBkZDRgNDBkZDA0ZDBoMGQwZDRkMGRkNDBkYDQwaGQwNGRgNDBkNGQwZGQwNGQwaGA0MGRkNDBkZDA0ZGAAF3AAAAAAAAAAAAAAAAA==
+      service: broadlink.send
+
+'856359337823':
+  alias: Three Pause
+  sequence:
+    - data:
+        host: 
+        packet:
+          - sgD8AKM0GA0MGRkNDBkZDA0ZDBkMGgwZDRkYDRgNDBoYDQwZDRkMGgwZDBkMGhgNDBkZDQwaGA0MGRkNDBkMGQ0ZGA0YDgwZGQ0MGRkMDBkZDQwZGQABI6MzGQwNGRgNDBoYDQwZDBoMGQ0ZDBkZDRgNDBkZDA0ZDBoMGQwZDRkMGRkMDRkYDQwaGQwMGhgNDBkMGgwZGA0ZDQ0ZGA0MGRkNDBkYDQ0ZGAABI6M0GA0MGRkNDBkZDA0ZDBkMGgwZDBoYDRkMDRkYDQwZDRkMGgwZDBkMGhgNDBkZDQwaGA0MGRkMDRkMGQ0ZGA0YDgwZGA0NGRgNDBoYDQwZGAAF3AAAAAAAAAAAAAAAAA==
+      service: broadlink.send
+
+'856359337824':
+  alias: Four Pause
+  sequence:
+    - data:
+        host: 
+        packet:
+          - sgBQAaMzGQ0MGRkNDBkYDQ0ZDBkMGgwZDBkZDRgNDBkZDQwZDBoMGQ0ZDBkMGRkNDBkZDA0ZGQ0MGRgNDBoMGRgNDBoMGQ0ZGA0MGhgNDBkZDQwZGAABI6M0GA0MGhgNDBkZDQwZDBkMGgwaDBkYDRkNDBkYDQwZDRkNGQwZDBkMGhgNDBkZDQwaGA0MGRkNDBkMGRkNDBkMGgwZGQwNGRgNDBoYDQwZGQABI6MzGQ0MGRgNDBoYDQwZDRkMGgwZDBkZDRgNDBkZDQwZDBoMGQwaDBkMGRkMDRkYDQwaGA0MGhgNDBkNGRgNDBkNGQ0YGQ0MGRkMDRkYDQwaGAABL6MzGQ0MGRkNDBkYDQwaDBkMGgwZDBoYDRgNDBkZDQwZDBoMGQ0ZDBkMGhgNDBkZDA0ZGQ0MGRgNDBoMGRgNDBoMGgwZGA0MGhgNDBkZDA0ZGAAF3AAAAAAAAAAA
+      service: broadlink.send
+
+          
+          

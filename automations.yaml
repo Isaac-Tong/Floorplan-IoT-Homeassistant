@@ -1,0 +1,113 @@
+- id: '1564279030743'
+  alias: Shades Down
+  trigger:
+  - event: sunset
+    platform: sun
+  condition: []
+  action:
+  - service: script.1563894723610
+  - data: {}
+    service: script.1563894736313
+  - data: {}
+    service: script.1563894736317
+  - data: {}
+    service: script.1563894723610
+# RIGHT Living Room Lights Group Automation    
+- id: Wireless_Button_To_Living_Room_Lights_Toggle_RIGHT
+  alias: Wireless Button To Living Room Lights Toggle RIGHT
+  trigger:
+  - event_data:
+      click_type: single
+      entity_id: binary_sensor.wall_switch_158d0002c7a633
+    event_type: xiaomi_aqara.click
+    platform: event
+  action:
+  - data:
+      entity_id: group.living_room_lights_right
+    service: homeassistant.toggle
+    
+- id: Wireless_Button_To_Living_Room_Lights_Off_RIGHT
+  alias: Wireless Button To Living Room Lights Off RIGHT
+  trigger:
+  - event_data:
+      click_type: double
+      entity_id: binary_sensor.wall_switch_158d0002c7a633
+    event_type: xiaomi_aqara.click
+    platform: event
+  action:
+  - data:
+      entity_id: group.living_room_lights_right
+    service: homeassistant.turn_off
+    
+    
+- id: Wireless_Button_To_Living_Room_Lights_On_RIGHT
+  alias: Wireless Button To Living Room Lights On RIGHT
+  trigger:
+  - event_data:
+      click_type: long
+      entity_id: binary_sensor.wall_switch_158d0002c7a633
+    event_type: xiaomi_aqara.click
+    platform: event
+  action:
+  - data:
+      entity_id: group.living_room_lights_right
+    service: homeassistant.turn_on
+
+#LEFT Living Room Lights Group Automation
+
+- id: Wireless_Button_To_Living_Room_Lights_Toggle_LEFT
+  alias: Wireless Button To Living Room Lights Toggle LEFT
+  trigger:
+  - event_data:
+      click_type: single
+      entity_id: binary_sensor.wall_switch_158d0002c9d65c
+    event_type: xiaomi_aqara.click
+    platform: event
+  action:
+  - data:
+      entity_id: group.living_room_lights_left
+    service: homeassistant.toggle
+    
+- id: Wireless_Button_To_Living_Room_Lights_Off_LEFT
+  alias: Wireless Button To Living Room Lights Off LEFT
+  trigger:
+  - event_data:
+      click_type: double
+      entity_id: binary_sensor.wall_switch_158d0002c9d65c
+    event_type: xiaomi_aqara.click
+    platform: event
+  action:
+  - data:
+      entity_id: group.living_room_lights_left
+    service: homeassistant.turn_off
+    
+    
+- id: Wireless_Button_To_Living_Room_Lights_On_LEFT
+  alias: Wireless Button To Living Room Lights On LEFT
+  trigger:
+  - event_data:
+      click_type: long
+      entity_id: binary_sensor.wall_switch_158d0002c9d65c
+    event_type: xiaomi_aqara.click
+    platform: event
+  action:
+  - data:
+      entity_id: group.living_room_lights_left
+    service: homeassistant.turn_on
+
+#Doorbell
+
+- id: Door_Bell_Ring
+  alias: Door Bell Ring
+  trigger:
+  - event_data:
+      click_type: single
+      entity_id: binary_sensor.wall_switch_158d0002c9d65c
+    event_type: xiaomi_aqara.click
+    platform: event
+  action:
+    service: xiaomi_aqara.play_ringtone
+    data:
+      ringtone_id: 10002
+      ringtone_vol: 8
+      

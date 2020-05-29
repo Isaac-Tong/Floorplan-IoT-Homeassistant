@@ -1,0 +1,22 @@
+living_room_lights_Right:
+    name: living_room_lights_right
+    entities:
+        - light.tradfri_bulb
+        - light.tradfri_bulb_2
+        - light.tradfri_bulb_3
+        - light.tradfri_bulb_4
+        - light.tradfri_bulb_5
+        - light.tradfri_bulb_6
+        - light.tradfri_bulb_7
+        - light.tradfri_bulb_8
+living_room_lights_Left:
+    name: living_room_lights_left
+    entities:
+        - light.tradfri_bulb_9
+        - light.tradfri_bulb_10
+        - light.tradfri_bulb_11
+        - light.tradfri_bulb_12
+        - light.tradfri_bulb_13
+        - light.tradfri_bulb_14
+        - light.tradfri_bulb_15
+        - light.tradfri_bulb_16
