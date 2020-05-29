@@ -1,2 +1,2 @@
 # Floorplan-IoT-Homeassistant
-Code to create a floorplan to control IoT devices
+![Floorplan Light Switch Demo](readme/demo.gif)
